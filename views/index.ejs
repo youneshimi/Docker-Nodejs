@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Styles */
+        .header-container {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Form Styles */
+        .form-container {
+            margin: 50px auto;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table Styles */
+        .table-container {
+            margin: 50px auto;
+            text-align: center;  /* Centrer la table */
+        }
+
+        table {
+            width: 80%;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .thead-dark {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    
+
+    
+
+    <!-- Student List -->
+    <div class="table-container mx-auto text-center">
+      <h2 class="mb-4">Student List</h2>
+      <table class="table table-bordered table-hover">
+          <thead class="thead-dark">
+              <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Email</th>
+              </tr>
+          </thead>
+          <tbody>
+              <% students.forEach(student => { %>
+                  <tr>
+                      <td><%= student.name %></td>
+                      <td><%= student.age %></td>
+                      <td><%= student.email %></td>
+                  </tr>
+              <% }); %>
+          </tbody>
+      </table>
+  </div>
+  
+  
+
+    <!-- Bouton pour accéder à la page de register -->
+    <div class="text-center">
+      <a href="/register" class="btn btn-primary">Register</a>
+  </div>
+
+
+    <!-- Bootstrap JS and Popper.js (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
